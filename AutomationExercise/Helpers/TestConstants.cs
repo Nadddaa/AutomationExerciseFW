@@ -22,5 +22,12 @@ namespace AutomationExercise.Helpers
         public const string City = "Montrael";
         public const string ZipCode = "18000";
         public const string Phone = "69760063";
+
+
+        //contact us datat
+
+        public const string Subject = "Request";
+        public const string Message = "Please remove all adds from your website?";
+
     }
 }

@@ -14,6 +14,7 @@ namespace AutomationExercise.Pages
         public By header = By.Id("header");
         public By LoginLink = By.ClassName("fa-lock");
         public By DeleteAcc = By.ClassName("fa-trash-o");
+        public By ContactLink = By.ClassName("fa-envelope");
         public HeaderPage(IWebDriver driver)
         {
             this._Driver = driver;
