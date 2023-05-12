@@ -17,8 +17,9 @@ namespace AutomationExercise.Pages
         public By searchBar = By.Id("search_product");
         public By searchBtn = By.ClassName("fa-search");
         public By searchedProductsTitle = By.XPath("//*[@class='features_items']//*[contains(text(),'Searched Products')]");
-
+        public By productLink = By.ClassName("fa-plus-square");
         
+
         public ProductPage(IWebDriver driver)
         {
             this._driver = driver;

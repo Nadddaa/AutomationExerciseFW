@@ -59,6 +59,13 @@ namespace AutomationExercise.Helpers
 
         }
 
+        public string ReturnTextFromElement(By locator)
+        {
+
+            return _driver.FindElement(locator).GetAttribute("TextContent");
+        }
+
+
     }
 
 }
