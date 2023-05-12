@@ -15,7 +15,7 @@ namespace AutomationExercise.Steps
         [Given(@"User opens sign in page")]
         public void GivenUserOpensSignInPage()
         {
-            ut.ClickOnElemnt(hp.LoginLink);  
+            ut.ClickOnElemnt(hp.loginLink);  
         }
         
         [Given(@"user enters correct credentials")]
@@ -38,7 +38,7 @@ namespace AutomationExercise.Steps
         [Then(@"user is logged in")]
         public void ThenUserIsLoggedIn()
         {
-            Assert.True(ut.ElementDisplayed(hp.DeleteAcc), "User is NOT logged in");
+            Assert.True(ut.ElementDisplayed(hp.deleteAcc), "User is NOT logged in");
         }
         [Given(@"enters '(.*)' name and valid email address")]
         public void GivenEntersNameAndValidEmailAddress(string name)
@@ -86,6 +86,30 @@ namespace AutomationExercise.Steps
             Assert.True(ut.TextPresentInElement(message)," USer did NOT get expected success message");
             ut.ClickOnElemnt(acp.continueBtn);
         }
+        [Given(@"user register an account with '(.*)' name")]
+        public void GivenUserRegisterAnAccountWithName(string name)
+        {
+            GivenUserOpensSignInPage();
+            GivenEntersNameAndValidEmailAddress(name);
+            GivenUserLickOnSignUpButton();
+            WhenUserFillsInAllRequiredFields();
+            WhenSubmitsTheSignUpForm();
+            AccountCreatedPage acp = new AccountCreatedPage(Driver);
+            ut.ClickOnElemnt(acp.continueBtn);
+        }
+
+        [When(@"user selects options for deleting account")]
+        public void WhenUserSelectsOptionsForDeletingAccount()
+        {
+            ut.ClickOnElemnt(hp.deleteAcc);
+        }
+
+        [Then(@"account is deleted with '(.*)' message")]
+        public void ThenAccountWillBeDeletedWithMessage(string message)
+        {
+            Assert.True(ut.TextPresentInElement(message), "Account is not deleted");
+        }
+
 
     }
 

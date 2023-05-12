@@ -15,5 +15,11 @@ Scenario: User can log in
 	And user lick on SignUp button 
 	When user fills in all required fields
 	And submits the sign up form
-	Then user will get 'Accout Created!' successs message 
+	Then user will get 'Account Created!' successs message 
 	And user is logged in 
+
+
+	Scenario: User can delete their account
+	Given user register an account with 'Nada' name
+	When user selects options for deleting account
+	Then account is deleted with 'Account Deleted!' message

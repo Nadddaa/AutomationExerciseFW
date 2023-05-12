@@ -17,7 +17,7 @@ namespace AutomationExercise.Steps
         [Given(@"user opens contact us page")]
         public void GivenUserOpensContactUsPage()
         {
-            ut.ClickOnElemnt(hp.ContactLink);
+            ut.ClickOnElemnt(hp.contactLink);
         }
         
         [When(@"user enters all required fields")]
@@ -28,7 +28,8 @@ namespace AutomationExercise.Steps
             ut.EnterTextInElement(cup.email, TestConstants.Username);
             ut.EnterTextInElement(cup.subject, TestConstants.Subject);
             ut.EnterTextInElement(cup.message, TestConstants.Message);
-
+            string path = @"C:\Users\ddani\Downloads\VOXAL (9).png";
+            Driver.FindElement(cup.uploadBtn).SendKeys(path);
         }
         
         [When(@"submits contact us form")]

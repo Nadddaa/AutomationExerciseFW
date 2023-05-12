@@ -24,10 +24,15 @@ namespace AutomationExercise.Helpers
         public const string Phone = "69760063";
 
 
-        //contact us datat
+        //contact us data
 
         public const string Subject = "Request";
         public const string Message = "Please remove all adds from your website?";
 
+
+        //products data
+
+        public const string Product = "shirt";
+        
     }
 }

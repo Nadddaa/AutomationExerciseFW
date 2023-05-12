@@ -11,8 +11,8 @@ namespace AutomationExercise.Pages
     class AccountCreatedPage
     {
         readonly IWebDriver _driver;
-        public By page = By.CssSelector(".row[data-qa='account created']");
-        public By continueBtn = By.ClassName(".btn-primary");
+        public By page = By.CssSelector(".row [data-qa='account-created']");
+        public By continueBtn = By.ClassName("btn-primary");
         public AccountCreatedPage(IWebDriver  driver)
         {
             this._driver = driver;

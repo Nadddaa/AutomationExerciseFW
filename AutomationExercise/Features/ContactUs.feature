@@ -6,7 +6,7 @@
 @mytag
 Scenario: User can send message via contact us form
     Given user opens contact us page
-    When user enters all required fields
+    When user enters all required fields 
         And submits contact us form
         And confirms the prompt message
     Then user will receive 'Success! Your details have been submitted successfully.' message
